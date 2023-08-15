@@ -3,9 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Landing Page HTML</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            border-bottom: 2px solid black;
+        }
+        nav p{
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: black;
+            font-family: Roboto;
+            font-size: 24px;
+            font-style: normal;
+        }
+
+        .header {
+            display: flex;
+            width: 615px;
+            height: 527px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 90px;
+        }
+
+        .header h1 {
+            margin-top: 114.2px;
+            color: #000;
+            font-family: Times New Roman;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 56px;
+        }
+
+        .header p {
+            color: rgba(0, 0, 0, 0.60);
+            font-family: Times New Roman;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28.8px;
+        }
+
+        .navigasi {
+            margin-top: 47.8px;
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .navigasi .getStart{
+            display: flex;
+            padding: 9px 28.359px 12px 28px;
+            align-items: flex-start;
+            border-radius: 1px;
+            border: 1px solid #000;
+            color: #000;
+            font-family: Times New Roman;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .navigasi .watch {
+            display: flex;
+            padding: 9px 28.359px 12px 28px;
+            align-items: flex-start;
+            color: #000;
+            font-family: Times New Roman;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px; 
+            margin-top: 5px;
+            text-decoration: none;
+        }
+
+        main img{
+            width: 636px;
+            height: 527px;
+            flex-shrink: 0;
+        }
+
+        main .subab {
+            
+            margin-left: 92px;
+        }
+
+        main .subab h3 {
+            margin-bottom: 15px;
+            display: flex;
+            width: 214.216px;
+            height: 35px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #000;
+            text-align: center;
+            font-family: Times New Roman;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 100% */
+        }
+
+        main .subab p{
+            margin-bottom: 15px;
+            color: #000;
+            font-family: Times New Roman;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22.5px; /* 150% */
+        }
+
+
+        main input {
+            width: 503px;
+            height: 31px;
+            flex-shrink: 0;
+        }
+
+        main .subab a {
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-flex;
+            padding: 9px 28.359px 12px 28px;
+            align-items: flex-start;
+            border-radius: 1px;
+            border: 1px solid #000;
+            color: black;
+        }
+
+        footer {
+            display: flex;
+            /* height: 19px; */
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 35px;
+            border-top: 1px solid black;
+        }
+
+        footer .copyright{
+            margin-left: 90px;
+            color: #000;
+            font-family: Times New Roman;
+            font-size: 14px;
+            font-style: normal;
+            /* font-weight: 700; */
+            line-height: 21px;
+
+        }
+
+        footer .design {
+            color: #000;
+            font-family: Times New Roman;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19.5px; /* 150% */
+            margin-left: 90px;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <p>Simple Header</p>
+        </nav>
+
+        <div class="header">
+            <h1>Better Solutions For Your Business</h1>
+            <p>We are team of talented designers making websites with Bootstrap</p>
+
+            <div class="navigasi">
+                <a href="#" class="getStart">Get Started</a>
+                <a href="#" class="watch">Watch Vidoe</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <img src="hero_image.png" alt="">
+        <div class="subab">
+            <h3>Join Our Newsletter</h3>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <input type="text">
+            <a href="#">Get Started</a>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">© Copyright <strong>Muhammad Akbar Ali Syifa</strong>. All Rights Reserved</p>
+        <p class="design">Designed by BootstrapMade</p>
+    </footer>
 </body>
 </html>
