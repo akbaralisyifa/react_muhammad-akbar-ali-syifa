@@ -1,5 +1,6 @@
-Kesimpulan Belajar Bootsrap Yaitu :
+Kesimpulan Belajar Javascript Yaitu :
 
-1. Belajar Bagaimana cara membuat starter awal di bootstrap
-2. Mempelajari struktur dan cara penggunaan class di bootstrap
-3. Membuat Latihan Bootstrap
+1. Belajar Bagaimana  menggunakan variabel, function, mathod
+2. Memperaktekan penggunaan addEventListener 
+3. Mempelajari bagaimana menggunak DOM 
+4. Membuat Latihan Javascript refreshment
