@@ -1,0 +1,8 @@
+.border-Yellow:focus {
+    box-shadow: 0 0 3px 2px yellow;
+}
+
+
+.border-red:focus {
+    box-shadow: 0 0 3px 2px red;
+}
