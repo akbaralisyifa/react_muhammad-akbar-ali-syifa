@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded",() => {
-    const inputProductName = document.querySelector(".productName");
+    const inputProductName = document.querySelector("#productName");
     const buttonSubmit = document.getElementById("buttonSubmit");
     const inputProductPrice = document.querySelector("#productPrice")
 
