@@ -1,12 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style/style.css">
-</head>
-<body>
-    
-</body>
+
+
+    <!-- Bagian google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--  Start Navbar  -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary myNavbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">Barre_Barr</a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">@akbaralisyifa</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#Home">Home</a>
+                    <a class="nav-link" href="#Product">Product</a>
+                    <a class="nav-link" href="#About">About</a>
+                    <a class="nav-link" href="#Contact">Contact</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+
+      <!-- Start Headers -->
+      <header>
+        <div class="container">
+            <div class="text-header">
+                <h1>Welcome To My Website</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, enim.</p>
+                <button class="button-Info">Info</button>
+            </div>
+        </div>
+      </header>
+      <!-- End Headers -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>
