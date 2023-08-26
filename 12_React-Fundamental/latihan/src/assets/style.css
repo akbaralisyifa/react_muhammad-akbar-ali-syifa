@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,600;10..48,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {  
+    background-color: white;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* BAGIAN NAVBAR */
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(12, 113, 143);
+    padding: 0 20px;
+
+}
+
+.Navbar .navText{
+    color: aliceblue;
+    text-shadow: 0 0 3px rgb(86, 185, 215);
+    text-transform: uppercase;
+}
+
+.Navbar > ul {
+    display: flex;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+
+.Navbar > ul > li {
+    list-style: none;
+}
+
+.Navbar > ul > li > a{
+    display: block;
+    text-decoration: none ;
+    padding: 20px;
+    color: white;
+    transition: 0.5s;
+}
+
+.Navbar > ul > li > a:hover{
+    background-color: rgb(71, 158, 185);
+}
+
+
+/* BAGIAN PROFILE CARD */
+
+.profile-card {
+    width: 14rem;
+    box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin:20px;
+    display: inline-block;
+}
+
+
+.profile-card > img {
+    width : 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.profile-card .profile-body {
+    margin-top: 5px;
+    padding: 10px 15px;
+}
+
+
