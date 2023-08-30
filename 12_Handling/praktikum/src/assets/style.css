@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* BAGIAN NAVBAR */
+.Navbar {
+    display: flex;
+    justify-content: space-between;    
+    height: 60px;
+    padding: 8.5px 34px 8.5px 16px;
+    align-items: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Navbar h2 {
+    color: var(--bs-dark, #212529);
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+
+.NavList {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.NavList li button{
+    text-decoration: none;
+    color: #0D6EFD;
+    display: inline-block;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/* BAGIAN HEADER PRODUCT */
+.product-header {
+    text-align: center;
+    width: 936px;
+    margin: 4rem auto;
+}
+
+.product-header h2 {
+    color: #212529;
+    font-family: Roboto;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px; /* 123.871% */
+    padding-top: 23px;
+}
+
+.product-header p {
+    color: #212529;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px; /* 150% */
+    padding-top: 9px;
+}
+
+/* BAGIAN PRODUCT FORM */
+
+.product-form {
+    /* width: 656px; */
+    background-color: aqua;
+    margin:24px auto;
+    padding: 0 28px 0 16px;
+}
+
+
+.product-form h3 {
+    color: #212529;
+    font-family: Roboto;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.8px; /* 125.217% */
+}
+
+
+.product-form__body {
+    margin-top: 17px;
+}
+
+
+.product-form__name {
+    display: flex;
+    width: 300px;
+    padding: 0px 9px 0px 8.358px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 9.5px;
+
+    color: #212529;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.product-form__name > input {
+    width: 282px;
+    height: 36px;
+}
+
+.product-form__category{
+    display: flex;
+    padding: 33px 377px 0px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 11.688px;
+
+    color: #212529;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+
+.product-form__image {
+    display: flex;
+    width: 609px;
+    padding: 33px 399px 0px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 11.688px;
+
+    color: #212529;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.product-form__freshness {
+    display: flex;
+    width: 612px;
+    padding: 33px 469.744px 0px 8px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+
+    color: #212529;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.product-form__description {
+    display: flex;
+    padding-top: 33px;
+    padding-left: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+
+    color: #212529;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+
+.product-form__description textarea {
+    width: 603px;
+    height: 116px;
+}
+
+.product-form__price {
+    display: flex;
+    padding-top: 33px;
+    padding-left: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: #212529;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+
+.product-form__price > input {
+    width: 604px;
+    height: 36px;
+}
+
+
+.product-form__button {
+    display: flex;
+    width: 557px;
+    align-items: flex-start;
+    /* padding-top: 16px; */
+    margin: auto;
+}
+
+.product-form__button > .button {
+    padding: 9px 209.408px 9px 209.592px;
+    border-radius: 4.8px;
+    border: 1px solid #0D6EFD;
+    background: #0D6EFD;
+    margin-top: 122px;
+
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 150% */
+}
+
+
+
+/* BAGIAN TABEL LIST */
+
+
+
