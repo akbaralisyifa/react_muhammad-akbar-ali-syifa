@@ -1,0 +1,61 @@
+.myNavbar {
+    background-color: rgb(0, 0, 0, 0.2) !important;
+}
+
+.navbar-brand, 
+.offcanvas-title {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+}
+.navbar-nav a {
+    color: white;
+}
+
+header {
+    background-image: url(../img/hero_img.png);
+    height: 35rem ;
+    margin-top: -4rem;
+    background-size: cover;
+    background-position: center;
+}
+
+
+header .container {
+    text-align: center;
+}
+
+header .text-header {
+    padding-top: 8rem;
+}
+
+
+header .text-header h1 {
+    color: whitesmoke;
+    text-shadow: 0 0 2px  rgba(0, 0, 0, 0.5);
+}
+
+header .text-header p {
+    font-family: "Tulpen One", sans-serif ;
+    font-size: 2rem;
+    color: whitesmoke;
+    text-shadow: 0 0 2px  rgba(0, 0, 0, 0.5);
+}
+
+
+header .button-Info {
+    padding: 3px 3rem;
+    background-color: rgb(247, 134, 122);
+    border: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 0 0 2px  rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+
+header .button-Info:hover {
+    background-color: rgb(230, 152, 144);
+
+}
