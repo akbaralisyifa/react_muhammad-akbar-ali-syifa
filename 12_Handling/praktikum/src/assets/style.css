@@ -78,8 +78,7 @@ body {
 /* BAGIAN PRODUCT FORM */
 
 .product-form {
-    /* width: 656px; */
-    background-color: aqua;
+    width: 656px;
     margin:24px auto;
     padding: 0 28px 0 16px;
 }
@@ -246,5 +245,37 @@ body {
 
 /* BAGIAN TABEL LIST */
 
+table{
+/* width: 80%; */
+ /* border: 1px solid black; */
+ padding: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+thead {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+thead >td{
+    border-right: 1px solid black;
+    padding: 10px;
+}
+
+thead:nth-child(6) {
+    border: none;
+}
 
 
+
+tbody {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+tbody > tr > td {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+
+}
