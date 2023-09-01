@@ -1,49 +1,42 @@
-import { Component } from "react";
+import { useState } from "react"
 
 
-class InputPengunjung extends Component {
-    constructor(props){
-        super(props)
-        this.state ={
-            nama : "",
-            umur : "",
-            jenisKelamin: "",
-            editing : true
-        }
+function InputPengunjung (props) {
+
+    const [data, setData] = useState({
+        nama : "",
+        umur : "",
+        jenisKelamin: ""
+    });
+    const [editing, setEditing] = useState(true)
+    
+
+    const onChange = e => {
+        setData({...data, [e.target.name] : e.target.value})
     }
 
-    onChange = e => {
-        this.setState({
-            [e.target.name] : e.target.value
-        })
-    }
-
-    handleBukaInput = () =>{
-        this.setState({
-            editing:false
-        })
+    const handleBukaInput = () =>{
+        setEditing(false)
     }
     
-    handleTutupInput = () =>{
-        this.setState({
-            editing:true
-        })
+    const handleTutupInput = () =>{
+        setEditing(true)
     }
 
-    handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        const isInputNotEmty = this.state.nama && this.state.umur && this.state.jenisKelamin;
+        const isInputNotEmty = data.nama && data.umur && data.jenisKelamin;
         if(isInputNotEmty){
             const newDate = {
-                nama : this.state.nama,
-                umur : this.state.umur,
-                jenisKelamin : this.state.jenisKelamin
+                nama : data.nama,
+                umur : data.umur,
+                jenisKelamin : data.jenisKelamin
             }
 
-            this.props.tambahPengunjung(newDate);
+            props.tambahPengunjung(newDate);
 
-            this.setState({
+            setData({
                 nama : "",
                 umur : "",
                 jenisKelamin : ""
@@ -54,33 +47,31 @@ class InputPengunjung extends Component {
     }
 
 
-    render(){
-
         const viewMode = {};
         const editMode = {};
 
-        (this.state.editing) ? viewMode.display = "none" : editMode.display = "None";
+        (editing) ? viewMode.display = "none" : editMode.display = "None";
 
         return(
             <div>
                 <div onSubmit={() => {}} style={viewMode}>
                     <label htmlFor="inputNama">Nama Pengunjung</label>
-                    <input type="text" placeholder="Masukan Nama..." id="inputNama" name="nama" value={this.state.nama} onChange={this.onChange} /><br />
+                    <input type="text" placeholder="Masukan Nama..." id="inputNama" name="nama" value={data.nama} onChange={onChange} /><br />
 
                     <label htmlFor="inputumur">Umur Pengunjung</label>
-                    <input type="text" id="inputumur" placeholder="Masukan Umur..." name="umur" value={this.state.umur}  onChange={this.onChange}/><br />
+                    <input type="text" id="inputumur" placeholder="Masukan Umur..." name="umur" value={data.umur}  onChange={onChange}/><br />
 
                     <label htmlFor="inputjenisKelamin">Jenis Kelamin</label>
-                    <input type="text" id="inputjenisKelamin" placeholder="Masukan Gender..." name="jenisKelamin" value={this.state.jenisKelamin} onChange={this.onChange} /><br />
+                    <input type="text" id="inputjenisKelamin" placeholder="Masukan Gender..." name="jenisKelamin" value={data.jenisKelamin} onChange={onChange} /><br />
 
-                    <button onClick={this.handleSubmit}>Input</button>
-                    <button onClick={this.handleTutupInput}>Batal</button>
+                    <button onClick={handleSubmit}>Input</button>
+                    <button onClick={handleTutupInput}>Batal</button>
                 </div>
 
-                <button onClick={this.handleBukaInput} style={editMode}>Masukan Nama Pengunjung</button>
+                <button onClick={handleBukaInput} style={editMode}>Masukan Nama Pengunjung</button>
             </div>
         )
-    }
+    
 }
 
 
