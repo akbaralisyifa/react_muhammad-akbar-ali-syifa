@@ -1,83 +1,66 @@
-import { Component } from "react";
+
 import NavbarPage from "./NavbarPage";
 import HeaderPage from "./HeaderPage";
 import { article } from "../article";
 import FormPage from "./FormPage";
 import TabelPage from "./TabelPage";
 import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
 
-class Home extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            data : [
-                {
-                    id : uuidv4() ,
-                    nama : "Erigo",
-                    Kategori : "Jacket",
-                    image : "img.jpg",
-                    freshness : "New Brand",
-                    deskripsi: "suisusius",
-                    price : "2",
-                },
-                {
-                    id : uuidv4() ,
-                    nama : "Erigo",
-                    Kategori : "Jacket",
-                    image : "img.jpg",
-                    freshness : "New Brand",
-                    deskripsi: "suisusius",
-                    price : "2",
-                },
-                {
-                    id : uuidv4() ,
-                    nama : "Erigo",
-                    Kategori : "Jacket",
-                    image : "img.jpg",
-                    freshness : "New Brand",
-                    deskripsi: "suisusius",
-                    price : "2",
-                },
-                {
-                    id : uuidv4() ,
-                    nama : "Erigo",
-                    Kategori : "Jacket",
-                    image : "img.jpg",
-                    freshness : "New Brand",
-                    deskripsi: "suisusius",
-                    price : "2",
-                },
-            ],
-        }
+
+const initialValue = [
+    {
+        id : uuidv4() ,
+        nama : "Eiger",
+        Kategori : "T-Shirt",
+        image : "img.jpg",
+        freshness : "New Brand",
+        deskripsi: "suisusius",
+        price : "2",
+    },
+    {
+        id : uuidv4() ,
+        nama : "Rei",
+        Kategori : "Jacket",
+        image : "img.jpg",
+        freshness : "New Brand",
+        deskripsi: "suisusius",
+        price : "2",
+    },
+    {
+        id : uuidv4() ,
+        nama : "Erigo",
+        Kategori : "Jacket",
+        image : "img.jpg",
+        freshness : "New Brand",
+        deskripsi: "suisusius",
+        price : "2",
+    },
+]
+
+function Home () {
+    const [data, setData] = useState(initialValue);
+
+    const hapusProduk = (id) => {
+        setData((oldData) => oldData.filter((produk) => {
+            return produk.id !== id;
+        }))
     }
 
-
-    hapusProduk = (id) => {
-        const newListProduk = this.state.data.filter((produk) => produk.id !== id);
-
-        this.setState({ data : newListProduk})
-    }
-
-    tambahProduk = (produkBaru) => {
+    const tambahProduk = (produkBaru) => {
         const newProduk = { id : uuidv4(), ...produkBaru};
-
-        console.log(newProduk.id);
-
-        this.setState({data : [...this.state.data, newProduk]});
-
+        setData((oldData) => [...oldData, newProduk]);
     }
 
-
-    render() {
-        return(
-            <>
-            <NavbarPage />
-            <HeaderPage article={article}/>
-            <FormPage tambahProduk={this.tambahProduk} />
-            <TabelPage datas={this.state.data} hapusProduk={this.hapusProduk}/>
-            </>
-        )
-    }
+    return(
+        <>
+        <NavbarPage />
+        <HeaderPage article={article}/>
+        <FormPage tambahProduk={tambahProduk} />
+        <TabelPage datas={data} hapusProduk={hapusProduk}/>
+        </>
+    )
+    
 }
 
 export default Home;
