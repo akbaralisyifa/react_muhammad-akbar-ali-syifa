@@ -1,3 +1,5 @@
+
+
 .myNavbar {
     background-color: rgb(0, 0, 0, 0.2) !important;
 }
@@ -51,11 +53,108 @@ header .button-Info {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     color: white;
     text-shadow: 0 0 2px  rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     transition: 0.5s;
 }
 
 
 header .button-Info:hover {
     background-color: rgb(230, 152, 144);
+};
 
+
+
+/* Bagian Footer */
+ .contact {
+    display: flex;
+    /* width: 1442px; */
+    padding: 60px 80px 30px 80px;
+    align-items: flex-start;
 }
+
+
+ #alamat > h3 {
+    color: rgb(247, 134, 122);
+    font-family: Jost;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 100% */
+    text-transform: uppercase;
+}
+
+#link > h3 {
+    color: rgb(247, 134, 122);
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.2px; /* 120% */
+}
+
+#link > ul {
+    /* width: 306px; */
+    align-items: flex-start;
+}
+
+#link > ul > li{
+    color: #777;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px;
+    list-style: none;
+}
+
+#service > h3{
+    color: rgb(247, 134, 122);
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.2px; /* 120% */
+}
+
+
+#service > ul > li {
+    color: #777;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 14px; 100% */
+    /* padding: 10px 227px 13px 32px; */
+    list-style: none;
+    padding: 10px;
+}
+
+
+#network > h2 {
+    color: rgb(247, 134, 122);
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.2px; /* 120% */
+}
+
+ #network > p{
+    color: #777;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 20px;
+    list-style: none;
+}
+
+#network > .sosmed > a {
+    padding: 20px;
+    border-radius: 100%;
+    background: rgb(247, 134, 122);
+}
+
+
+
+
