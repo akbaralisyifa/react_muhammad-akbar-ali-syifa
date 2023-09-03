@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function FormPage (props){
     const [data, setData] = useState({
@@ -48,7 +48,8 @@ function FormPage (props){
 
     return(
         <>
-            <div onSubmit={() => {}} className="product-form">
+        <div onSubmit={() => {}} className="d-flex justify-content-center mt-5">
+            <form class="col-md-6">
                 <div class="product-form__name">
                     <label for="produkName" class="form-label">Product Name</label>
                     <input type="text" id="produkName" name="nama" value={data.nama} onChange={onchange} />
@@ -99,6 +100,7 @@ function FormPage (props){
                 <div class="product-form__button">
                     <button type="submit" class="button" onClick={handleSubmit }>Submit</button>
                 </div>
+            </form>
             </div>
         </>
     )

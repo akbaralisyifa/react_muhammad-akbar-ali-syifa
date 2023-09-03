@@ -242,40 +242,8 @@ body {
 }
 
 
+/* Bagian Tabel */
 
-/* BAGIAN TABEL LIST */
-
-table{
-/* width: 80%; */
- /* border: 1px solid black; */
- padding: 10px;
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-thead {
-    border: 1px solid black;
-    box-sizing: border-box;
-}
-thead >td{
-    border-right: 1px solid black;
-    padding: 10px;
-}
-
-thead:nth-child(6) {
-    border: none;
-}
-
-
-
-tbody {
-    border: 1px solid black;
-    box-sizing: border-box;
-}
-
-tbody > tr > td {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 10px;
-
+tabel > thead > tr > td {
+    font-weight: bold;
 }

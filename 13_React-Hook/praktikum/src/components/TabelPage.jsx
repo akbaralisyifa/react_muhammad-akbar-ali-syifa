@@ -1,22 +1,29 @@
 import TabelList from "./TabelList";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const TabelPage = ({datas, hapusProduk}) => {
+const TabelPage = ({datas, hapusProduk, uniqNumber}) => {
+
+
+
     return (
-        <div className="tabel__body">
-            <table>
+        <div className="container my-5">
+            <table class="table">
                 <thead>
-                <td>Product Name</td>
-                <td>Category</td>
-                <td>Image</td>
-                <td>Frashness</td>
-                <td>Description</td>
-                <td>Price</td>
-                <td>Aksi</td>
+                    <tr>
+                        <th>No</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        {/* <th>Image</th> */}
+                        <th>Frashness</th>
+                        {/* <th>Description</th> */}
+                        <th>Price</th>
+                        <th>Aksi</th>
+                    </tr>
                 </thead>
 
-                <tbody>
-                    {datas.map((data) => <TabelList key={data.id} item={data} hapusProduk={hapusProduk} />)}
+                <tbody className="tabel_list">
+                    {datas.map((data, index) => <TabelList noUrut={index} key={data.id} item={data} hapusProduk={hapusProduk} />)}
                 </tbody>
             </table>
         </div>

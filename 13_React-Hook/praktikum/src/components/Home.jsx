@@ -5,7 +5,7 @@ import { article } from "../article";
 import FormPage from "./FormPage";
 import TabelPage from "./TabelPage";
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const initialValue = [
@@ -41,16 +41,27 @@ const initialValue = [
 function Home () {
     const [data, setData] = useState(initialValue);
 
+
+    useEffect(() => {
+        window.alert("Welcome");
+    }, []);
+    
     const hapusProduk = (id) => {
-        setData((oldData) => oldData.filter((produk) => {
-            return produk.id !== id;
-        }))
+        const isConfirm = window.confirm("Apakah kalian ingin menghapus ?")
+
+        if(isConfirm){
+            setData((oldData) => oldData.filter((produk) => {
+                return produk.id !== id;
+            }))
+        }
     }
+
 
     const tambahProduk = (produkBaru) => {
         const newProduk = { id : uuidv4(), ...produkBaru};
         setData((oldData) => [...oldData, newProduk]);
     }
+
 
     return(
         <>
