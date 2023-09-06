@@ -1,0 +1,38 @@
+
+
+/* BAGIAN NAVBAR */
+.Navbar {
+    display: flex;
+    justify-content: space-between;    
+    height: 60px;
+    padding: 8.5px 34px 8.5px 16px;
+    align-items: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Navbar h2 {
+    color: var(--bs-dark, #212529);
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+
+.NavList {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.NavList li Link{
+    text-decoration: none;
+    color: #0D6EFD;
+    display: inline-block;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
