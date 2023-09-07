@@ -17,3 +17,34 @@ export const article = {
     }
   
   };
+
+  import { v4 as uuidv4 } from 'uuid';
+  export const initialValue = [
+    {
+        id : uuidv4() ,
+        nama : "Eiger",
+        Kategori : "T-Shirt",
+        image : "img.jpg",
+        freshness : "New Brand",
+        deskripsi: "suisusius",
+        price : "2",
+    },
+    {
+        id : uuidv4() ,
+        nama : "Rei",
+        Kategori : "Jacket",
+        image : "img.jpg",
+        freshness : "New Brand",
+        deskripsi: "suisusius",
+        price : "4",
+    },
+    {
+        id : uuidv4() ,
+        nama : "Erigo",
+        Kategori : "Jacket",
+        image : "img.jpg",
+        freshness : "New Brand",
+        deskripsi: "suisusius",
+        price : "6",
+    },
+]

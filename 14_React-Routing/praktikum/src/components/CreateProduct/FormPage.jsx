@@ -59,9 +59,9 @@ function FormPage (props){
                     <label for="ProductCategory">Product Category</label>
                     <select id="productCategory"  name="Kategori" value={data.Kategori} onChange={onchange}>
                         <option selected>Choose...</option>
-                        <option value="Shirt">Shirt</option>
-                        <option value="T-Shirt">T-Shirt</option>
-                        <option value="Jacket">Jacket</option>
+                        <option value="Shirt" selected={data.Kategori === "Shirt"}>Shirt</option>
+                        <option value="T-Shirt" selected={data.Kategori === "T-Shirt"}>T-Shirt</option>
+                        <option value="Jacket" selected={data.Kategori === "acket"}>Jacket</option>
                     </select>
                 </div>
 

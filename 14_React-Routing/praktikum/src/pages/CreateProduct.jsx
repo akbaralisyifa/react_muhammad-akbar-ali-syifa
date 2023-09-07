@@ -1,7 +1,7 @@
 
 // import NavbarPage from "./NavbarPage";
 import HeaderPage from "../components/CreateProduct/HeaderPage";
-import { article } from "../article";
+import { article, initialValue } from "../article";
 import FormPage from "../components/CreateProduct/FormPage";
 import TabelPage from "../components/CreateProduct/TabelPage";
 import { v4 as uuidv4 } from 'uuid';
@@ -11,35 +11,35 @@ import { useEffect, useState } from "react";
 import '../assets/styleNavbar.css'
 import '../assets/styleProduct.css'
 
-const initialValue = [
-    {
-        id : uuidv4() ,
-        nama : "Eiger",
-        Kategori : "T-Shirt",
-        image : "img.jpg",
-        freshness : "New Brand",
-        deskripsi: "suisusius",
-        price : "2",
-    },
-    {
-        id : uuidv4() ,
-        nama : "Rei",
-        Kategori : "Jacket",
-        image : "img.jpg",
-        freshness : "New Brand",
-        deskripsi: "suisusius",
-        price : "2",
-    },
-    {
-        id : uuidv4() ,
-        nama : "Erigo",
-        Kategori : "Jacket",
-        image : "img.jpg",
-        freshness : "New Brand",
-        deskripsi: "suisusius",
-        price : "2",
-    },
-]
+// const initialValue = [
+//     {
+//         id : uuidv4() ,
+//         nama : "Eiger",
+//         Kategori : "T-Shirt",
+//         image : "img.jpg",
+//         freshness : "New Brand",
+//         deskripsi: "suisusius",
+//         price : "2",
+//     },
+//     {
+//         id : uuidv4() ,
+//         nama : "Rei",
+//         Kategori : "Jacket",
+//         image : "img.jpg",
+//         freshness : "New Brand",
+//         deskripsi: "suisusius",
+//         price : "2",
+//     },
+//     {
+//         id : uuidv4() ,
+//         nama : "Erigo",
+//         Kategori : "Jacket",
+//         image : "img.jpg",
+//         freshness : "New Brand",
+//         deskripsi: "suisusius",
+//         price : "2",
+//     },
+// ]
 
 function CreateProduct () {
     const [data, setData] = useState(initialValue);

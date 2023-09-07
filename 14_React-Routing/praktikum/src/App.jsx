@@ -3,6 +3,7 @@ import Navbar from "./pages/Navbar"
 import LandingPage from "./pages/LandingPage"
 import CreateProduct from "./pages/CreateProduct"
 import NotFound from "./pages/NotFound"
+import DetailProduct from "./pages/DetailProduct"
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <>
     <Navbar />
       <Routes>
-        <Route path="/" element={<LandingPage />}  />
-        <Route path="/createProduct" element={<CreateProduct/>} />
+        <Route path="/" exact element={<LandingPage />}  />
+        <Route path="/createProduct" exact element={<CreateProduct/>} />
+        <Route path="/createProduct/:nama" element={<DetailProduct/>}/>
         <Route path="*" element={NotFound} />
       </Routes>  
     </>

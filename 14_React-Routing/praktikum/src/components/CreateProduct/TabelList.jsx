@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom"
+
+
 const TabelList = ({item, hapusProduk, nomorUrut}) => {
-
+    // const {item, hapusProduk, nomorUrut} = props
     const navigation = useNavigate()
-const toDetail = () => {
-
+    const toDetail = () => {
+    navigation(`/createProduct/${item.nama}`)
 }
 
     return(
