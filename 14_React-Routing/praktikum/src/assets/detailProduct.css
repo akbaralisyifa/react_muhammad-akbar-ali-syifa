@@ -1,0 +1,23 @@
+
+.detail-product {
+    width: 400px;
+    /* background-color: antiquewhite; */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+.detail-judul {
+    text-align: center;
+}
+
+.detail-nama {
+    margin-top: 10px;
+}
+
+.detail-id {
+    font-size: 12px;
+    font-style: italic;
+}
