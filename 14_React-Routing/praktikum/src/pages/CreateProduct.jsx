@@ -45,9 +45,9 @@ function CreateProduct () {
     const [data, setData] = useState(initialValue);
 
 
-    useEffect(() => {
-        // window.alert("Welcome");
-    }, []);
+    // useEffect(() => {
+     // window.alert("Welcome");
+    // }, []);
     
     const hapusProduk = (id) => {
         const isConfirm = window.confirm("Apakah kalian ingin menghapus ?")

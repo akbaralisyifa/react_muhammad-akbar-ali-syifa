@@ -1,0 +1,137 @@
+header {
+    display: flex;
+    /* height: 760px; */
+    padding: 50px 83px 72px 82px;
+    justify-content: center;
+    align-items: center;
+    background-color: #37517E;
+    margin-top: 78px;
+    position: relative;
+}
+
+header > .judulHeader > h1 {
+    height: 125px;
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px; /* 116.667% */
+    /* padding-top: 114px; */
+}
+
+
+header > .judulHeader > p {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px; /* 120% */
+}
+
+header > .judulHeader > ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 48px;
+}
+
+header > .judulHeader > ul > li {
+    list-style: none;
+}
+
+header > .judulHeader > ul > li > a.link-start {
+    box-shadow: 0 0 3px rgba(122, 205, 246, 0.3);
+    border-radius: 10px;
+}
+
+header > .judulHeader > ul > li > a {
+    text-decoration: none;
+    padding: 9px 28.359px 12px 28px;
+    color: #FFF;
+}
+
+
+header > .heroImage {
+    flex-shrink: 0;
+}
+
+header > .heroImage > img {
+    display: inline-block;
+    width: 600px;
+    /* height: 527px; */
+    background-repeat: no-repeats;
+}
+
+
+/* BAGIAN MAIN  */
+main {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #F3F5FA;
+}
+
+
+main > .main-content {
+    width: 900px;
+    height: 139px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main > .main-content > h3 {
+    color: #37517E;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+    margin-bottom: 16px;
+
+}
+
+main > .main-content > p {
+    color: #444;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.5px; /* 150% */
+    margin-bottom: 38px;
+}
+
+
+
+form {
+    padding-left: 10px;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.06);
+    
+}
+
+input{
+    width: 516px;
+    height: 30.5px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.06);
+}
+
+
+button {
+    border: none;
+    padding: 9.25px 20.016px 9.25px 19px;
+    border-radius: 50px;
+    background: #47B2E4;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+
+
+
+
+
+
