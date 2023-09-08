@@ -1,10 +1,16 @@
+import { article } from "../article";
+import ProductHeader from "../components/createProduct/HeaderProduct";
+
+import '../assets/styleProduct.css'
+import FormProduct from "../components/createProduct/FormProduct";
 
 
 const CreateProduct = () => {
     return (
-        <div>
-            <h1>Halaman Create Product</h1>
-        </div>
+        <>
+            <ProductHeader article={article} />
+            <FormProduct />
+        </>
     )
 }
 
