@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage'
 import CreateProduct from './pages/CreateProduct'
 import NotFound from './pages/NotFound'
 import Navbar from './pages/Navbar'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

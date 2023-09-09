@@ -5,7 +5,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #37517E;
-    margin-top: 78px;
+    margin-top: 61px;
     position: relative;
 }
 
@@ -103,7 +103,7 @@ main > .main-content > p {
 
 
 
-form {
+form.form-landingPage {
     padding-left: 10px;
     border-radius: 50px;
     background: #FFF;
@@ -111,7 +111,7 @@ form {
     
 }
 
-input{
+input.input-landingPage{
     width: 516px;
     height: 30.5px;
     outline: none;
@@ -120,7 +120,7 @@ input{
 }
 
 
-button {
+button.button-landingPage{
     border: none;
     padding: 9.25px 20.016px 9.25px 19px;
     border-radius: 50px;
