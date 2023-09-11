@@ -1,10 +1,8 @@
-import { article } from "../article";
-import ProductHeader from "../components/createProduct/HeaderProduct";
-import { v4 as uuidv4 } from 'uuid';
-import '../assets/styleProduct.css'
-import FormProduct from "../components/createProduct/FormProduct";
+
+
 import { useState } from "react";
-import TabelProduct from "../components/createProduct/TableProduct";
+import { v4 as uuidv4 } from "uuid";
+
 
 const initialValue = [
     {
@@ -37,32 +35,22 @@ const initialValue = [
 ]
 
 
-const CreateProduct = () => {
+const CreateProduct  = () => {
 
     const [data, setData] = useState(initialValue);
 
-    const hapusProduct = (id) => {
-        setData((dataOld) => dataOld.filter((produk) => {
-            return produk.id !== id
-        }))
+
+    // Hapus Produk 
+    const hapusProduct = (id) {
+        setData((oldData) => oldData.filter((produk) => return produk.id === id))
     }
 
-
-    const tambahProduk = (newProduk) => {
-        const produkBaru = {id : uuidv4(), ...newProduk};
-
-        setData((oldData) => [...oldData, produkBaru]);
-    }   
-
-
-    
-    return (
-        <>
-            <ProductHeader article={article} />
-            <FormProduct tambahProduk={tambahProduk} />
-            <TabelProduct datas={data} hapusProduct={hapusProduct} />
-        </>
-    )
+   return (
+    <div style={{marginTop:"150px"}}>
+        <h2>Halman create produk</h2>
+    </div>
+   )
 }
+
 
 export default CreateProduct;
