@@ -1,5 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom'
+import {Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import CreateProduct from './pages/CreateProduct'
 import NotFound from './pages/NotFound'
