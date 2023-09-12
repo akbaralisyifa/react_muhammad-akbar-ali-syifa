@@ -6,7 +6,7 @@ const TabelProduct = (props) => {
     return (
         <div className="container">
             <table className="table my-5">
-                <thead>
+                <thead className="text-center">
                     <tr>
                         <th>Nama</th>
                         <th>Kategori</th>
@@ -18,7 +18,7 @@ const TabelProduct = (props) => {
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody className="text-center">
                     {datas.map((data) => 
                         <TabelList key={data.id} item={data} hapusProduk={hapusProduk} />
                     )}

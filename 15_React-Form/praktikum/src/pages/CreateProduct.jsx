@@ -8,7 +8,7 @@ import '../assets/styleProduct.css'
 import FormProduct from "../components/createProduct/FormProduct";
 import TabelProduct from "../components/createProduct/TableProduct";
 
-const initialValue = [
+export const initialValue = [
     {
         id : uuidv4() ,
         nama : "Eiger",

@@ -57,6 +57,7 @@ const FormProduct = (props) => {
         setData(dataKosong);
         // reset input image 
         imageRef.current.value = null;
+        data.freshness.checked = false;
 
     }
 
@@ -68,7 +69,7 @@ const FormProduct = (props) => {
 
     return(
         <div>
-            <form style={{marginLeft:"50px"}}>
+            <form style={{marginLeft:"50px"}} className="form">
                 <label>
                     Nama Produk : 
                     <input 
@@ -82,6 +83,7 @@ const FormProduct = (props) => {
                 <label>
                 Product Category : 
                 <select name="kategori" value={data.kategori} onChange={handleChange}>
+                    <option checked>choose...</option>
                     <option value="Shirt">Shirt</option>
                     <option value="T-Shirt">T-Shirt</option>
                     <option value="Jacket">Jacket</option>
@@ -149,8 +151,8 @@ const FormProduct = (props) => {
                     />
                 </label><br />
 
-                <button onClick={handleSubmit} type="submit">Submit</button>
-                <button onClick={buttonReset}>Reset</button>
+                <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+                <button onClick={buttonReset} className="btn btn-outline-danger">Reset</button>
             </form>
         </div>
     )
