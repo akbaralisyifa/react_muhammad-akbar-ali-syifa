@@ -1,15 +1,15 @@
 Kesimpulan dari belajar React Routing :
 
-1. 
-2. 
-3. 
+1. Memahami bagaimana cara memanfaatkan react-router-dom 
+2. Penggunaan browserrouter, routes, route dalam membuat SPA
+3. Memanfaatkan Link sebagai navigasi, 
 
 
 tugas : 
 (80 Poin Prioritas) 
-=> Buatlah halaman LandingPage berdasarkan LandingPage.html yang telah kalian buat pada tugas sebelumnya
+=> Buatlah halaman LandingPage berdasarkan LandingPage.html yang telah kalian buat pada tugas sebelumnya✅
 
-=> Tambahkan tombol pada komponen LandingPage.jsx untuk menavigasi ke komponen CreateProduct.jsx dan Gunakan React Routing untuk navigasi antara component LandingPage.jsx dan CreateProduct.jsx
+=> Tambahkan tombol pada komponen LandingPage.jsx untuk menavigasi ke komponen CreateProduct.jsx dan Gunakan React Routing untuk navigasi antara component LandingPage.jsx dan CreateProduct.jsx✅
 
 
 ( 20 Poin Prioritas)

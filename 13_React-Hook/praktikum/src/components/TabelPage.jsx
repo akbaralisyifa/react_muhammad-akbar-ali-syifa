@@ -2,7 +2,7 @@ import TabelList from "./TabelList";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const TabelPage = ({datas, hapusProduk, uniqNumber}) => {
+const TabelPage = ({datas, hapusProduk}) => {
 
 
 
