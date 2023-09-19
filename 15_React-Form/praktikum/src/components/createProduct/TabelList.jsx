@@ -7,7 +7,7 @@ const TabelList = (props) => {
     const navigate = useNavigate();
     
     const getDetail = () => {
-        navigate(`/createProduct/${item.nama}`, {item})
+        navigate(`/createProduct/${item.nama}`)
     }
 
     return(

@@ -14,12 +14,35 @@ const FormProduct = (props) => {
     // state input 
     const [data, setData] = useState(dataKosong);
     const imageRef = useRef(null);
+    const [messageError, setMessageError] = useState("");
+
+    // Regex 
+    const regexName = /^[A-Za-z -]+$/; 
+    const regexPrice = /^[1-9]+(?:\.[1-9]{1,2})?$/;
 
 
     const handleChange = (e) => {
         const target = e.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
+
+        
+        if (name === "nama") {
+            if (regexName.test(value)) {
+              setMessageError("");
+            } else {
+              setMessageError("Nama Tidak Boleh Mengandung angka");
+            }
+          }
+      
+          if (name === "price") {
+            if (regexPrice.test(value)) {
+              setMessageError("");
+            } else {
+              setMessageError("Jangan Lupa input harga");
+            }
+          }
+        
 
         setData({
             ...data, 
@@ -43,23 +66,28 @@ const FormProduct = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        const newData = {
-            nama : data.nama,
-            kategori : data.kategori,
-            image : data.image,
-            freshness : data.freshness,
-            deskripsi : data.deskripsi,
-            price : data.price
+    
+        if (messageError !== "") {
+          alert(messageError);
+        } else {
+          const newData = {
+            nama: data.nama,
+            kategori: data.kategori,
+            image: data.image,
+            freshness: data.freshness,
+            deskripsi: data.deskripsi,
+            price: data.price,
+          };
+    
+          props.tambahProduk(newData);
+          setData(dataKosong);
+          alert("Data berhasil Di input");
         }
-
-        props.tambahProduk(newData);
-        setData(dataKosong);
-        // reset input image 
+    
+        // reset input image
         imageRef.current.value = null;
         data.freshness.checked = false;
-
-    }
+      };
 
 
     const buttonReset = () => {
@@ -82,7 +110,7 @@ const FormProduct = (props) => {
 
                 <label>
                 Product Category : 
-                <select name="kategori" value={data.kategori} onChange={handleChange}>
+                <select name="kategori" value={data.kategori} onChange={handleChange} required>
                     <option checked>choose...</option>
                     <option value="Shirt">Shirt</option>
                     <option value="T-Shirt">T-Shirt</option>
