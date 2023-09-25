@@ -4,6 +4,8 @@ Kesimpulan dari belajar Deployment yaitu :
 2. cara mendeploy ada 3 diantara nya yaitu menggunakan Surge, Netlify, dan Vercel (recommend)
 3. setelah memahami bagaimana cara menggunakan nya kita melakukan atau langsung mengimplementasi kan ke projek yang ingin kita deploy
 
+link website : https://deploy-react-3aexe7ilf-akbaralisyifas-projects.vercel.app/
+
 langkah2 nya :
 
 Menggunakan Surge :
