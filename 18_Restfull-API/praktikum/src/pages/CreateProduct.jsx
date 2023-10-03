@@ -1,66 +1,31 @@
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import ProductHeader from '../components/createProduct/HeaderProduct';
-import { article } from '../article';
-
-import '../assets/styleProduct.css';
-import FormProduct from '../components/createProduct/FormProduct';
-import TabelProduct from '../components/createProduct/TableProduct';
-
-export const initialValue = [
-  {
-    id: uuidv4(),
-    nama: 'Eiger',
-    kategori: 'T-Shirt',
-    image: null,
-    freshness: 'New Brand',
-    deskripsi: 'suisusius',
-    price: 3,
-  },
-  {
-    id: uuidv4(),
-    nama: 'Rei',
-    kategori: 'Jacket',
-    image: null,
-    freshness: 'New Brand',
-    deskripsi: 'suisusius',
-    price: 3,
-  },
-  {
-    id: uuidv4(),
-    nama: 'Erigo',
-    kategori: 'Jacket',
-    image: null,
-    freshness: 'New Brand',
-    deskripsi: 'suisusius',
-    price: 3,
-  },
-];
+import { Axios } from 'axios';
+import { useEffect, useState } from 'react';
+import TabelProduct from '../components/TabelProduct';
 
 const CreateProduct = () => {
-  const [data, setData] = useState(initialValue);
+  const [data, setData] = useState([]);
 
-  // Hapus Produk
-  const hapusProduk = (id) => {
-    setData((oldData) =>
-      oldData.filter((produk) => {
-        return produk.id !== id;
-      })
-    );
+  const instanceAxios = new Axios();
+
+  const getData = async () => {
+    let url = 'https://65127c2db8c6ce52b395afbb.mockapi.io/products';
+
+    try {
+      const response = await instanceAxios.get(url);
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  // Tambah Data produk
-  const tambahProduk = (newProduk) => {
-    const produkBaru = { id: uuidv4(), ...newProduk };
-
-    setData((oldData) => [...oldData, produkBaru]);
-  };
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div>
-      <ProductHeader article={article} />
-      <FormProduct tambahProduk={tambahProduk} />
-      <TabelProduct datas={data} hapusProduk={hapusProduk} />
+      <h1>Bagian Crate Product</h1>
+      <TabelProduct datas={data} />
     </div>
   );
 };
