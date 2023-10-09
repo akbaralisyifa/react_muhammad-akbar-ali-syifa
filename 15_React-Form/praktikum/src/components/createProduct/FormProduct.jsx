@@ -31,7 +31,6 @@ const FormProduct = (props) => {
         setMessageError('Nama Tidak Boleh Mengandung angka');
       }
     }
-
     if (name === 'price') {
       if (regexPrice.test(value)) {
         setMessageError('');
@@ -123,7 +122,7 @@ const FormProduct = (props) => {
           <div>
             <input type="radio" name="freshness" value="Refurbished" checked={data.freshness === 'Refurbished'} onChange={handleChange} /> <label>Refurbished</label>
           </div>
-        </label>{' '}
+        </label>
         <br />
         <label>
           Description :
