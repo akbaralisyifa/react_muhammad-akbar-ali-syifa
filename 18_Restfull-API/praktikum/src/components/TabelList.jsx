@@ -13,7 +13,7 @@ const TabelList = ({ datas, handleDelete }) => {
             <td className="border border-s-lime-200 text-sm text-center p-2">$ {val.price}</td>
 
             <td className="border border-s-lime-200 text-sm text-center p-2">
-              <TabelButton val={val} texts={['Detail', 'Delete']} handleDelete={handleDelete} />
+              <TabelButton val={val} texts={['Edit', 'Delete']} handleDelete={handleDelete} />
               {/* <button onClick={() => handleDelete(val.id)}>Delete</button> */}
             </td>
           </tr>

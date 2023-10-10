@@ -5,7 +5,7 @@ import InputCategory from './molecules/inputCategory';
 import InputName from './molecules/InputProduct';
 import InputPrice from './molecules/inputPrice';
 import ButtonBack from './molecules/ButtonBack';
-import { addProductAsync } from '../store/productSlice';
+import { addProductAsync, updateProductAsync } from '../store/productSlice';
 
 const DataEmty = {
   name: '',
@@ -17,6 +17,7 @@ const DataEmty = {
 const FormProduct = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState(DataEmty);
+  const [editProduct, setEditProduct] = useState(null);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -30,11 +31,21 @@ const FormProduct = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleCreateProduct = async (e) => {
     e.preventDefault();
 
     dispatch(addProductAsync(data));
     navigate('/products');
+  };
+
+  const handleUpdateProduct = async (e) => {
+    e.preventDefault();
+
+    if (editProduct) {
+      await dispatch(updateProductAsync(editProduct));
+      setEditProduct(null);
+      navigate('/products');
+    }
   };
 
   return (
@@ -69,7 +80,10 @@ const FormProduct = () => {
 
         <InputPrice name="price" type="number" value={data.price} onChange={handleChange} />
 
-        <button onClick={handleSubmit} className="bg-cyan-600 w-4/5 py-2 rounded-md mx-auto font-semibold text-white lowercase mt-10 ">
+        {/* <button onClick={handleUpdateProduct} className="bg-cyan-600 w-4/5 py-2 rounded-md mx-auto font-semibold text-white lowercase mt-10 ">
+          Create Products
+        </button> */}
+        <button onClick={handleCreateProduct} className="bg-cyan-600 w-4/5 py-2 rounded-md mx-auto font-semibold text-white lowercase mt-10 ">
           Create Products
         </button>
       </form>
