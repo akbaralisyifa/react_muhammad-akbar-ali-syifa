@@ -1,5 +1,6 @@
 // import { Axios } from 'axios';
 // import { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar';
 import TabelProduct from '../components/TabelProduct';
 // import axios from 'axios';
 
@@ -26,6 +27,7 @@ const CreateProduct = () => {
 
   return (
     <div>
+      <Navbar />
       <TabelProduct />
     </div>
   );

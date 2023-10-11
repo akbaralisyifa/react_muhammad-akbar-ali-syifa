@@ -6,7 +6,7 @@ const Navbar = () => {
       <h1 className="font-semibold text-2xl text-slate-700">Barre_barre</h1>
       <ul className="flex">
         <li className="">
-          <Link className="shadow-md rounded-sm font-semibold px-3 py-2 lowercase text-slate-700  mr-2" to="/">
+          <Link className="shadow-md rounded-sm font-semibold px-3 py-2 lowercase text-slate-700  mr-2" to="/home">
             Home
           </Link>
         </li>
